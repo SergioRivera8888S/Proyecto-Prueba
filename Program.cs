@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+//Texto de prueba
+
 namespace Proyecto_Unidad_3_Patrones
 {
     // Componente base 
