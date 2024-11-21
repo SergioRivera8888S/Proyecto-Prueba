@@ -121,7 +121,7 @@ namespace Proyecto_Unidad_3_Patrones
 
             while (true)
             {
-                Console.WriteLine("\n1. Agregar jugador");
+                Console.WriteLine("\n1. Agregar");
                 Console.WriteLine("2. Asignar rol especial a un jugador");
                 Console.WriteLine("3. Mostrar equipos");
                 Console.WriteLine("4. Salir");
