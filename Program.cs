@@ -118,10 +118,11 @@ namespace Proyecto_Unidad_3_Patrones
         {
             var equipoA = new Equipo("Equipo A");
             var equipoB = new Equipo("Equipo B");
+            var equipoC = new Equipo("Equipo C");
 
             while (true)
             {
-                Console.WriteLine("\n1. Agregar jugador");
+                Console.WriteLine("\n1. Agregar");
                 Console.WriteLine("2. Asignar rol especial a un jugador");
                 Console.WriteLine("3. Mostrar equipos");
                 Console.WriteLine("4. Salir");
@@ -138,6 +139,7 @@ namespace Proyecto_Unidad_3_Patrones
                         Console.WriteLine("Selecciona el equipo para agregar al jugador:");
                         Console.WriteLine("1. Equipo A");
                         Console.WriteLine("2. Equipo B");
+                        Console.WriteLine("3. Equipo C");
                         var equipoSeleccionado = Console.ReadLine();
 
                         if (equipoSeleccionado == "1")
@@ -150,6 +152,11 @@ namespace Proyecto_Unidad_3_Patrones
                             equipoB.Agregar(jugador);
                             Console.WriteLine($"Jugador {nombreJugador} agregado al Equipo B.");
                         }
+                         else if (equipoSeleccionado == "3")
+                        {
+                            equipoC.Agregar(jugador);
+                            Console.WriteLine($"Jugador {nombreJugador} agregado al Equipo C.");
+                        }
                         else
                         {
                             Console.WriteLine("Opción de equipo no válida.");
@@ -160,9 +167,10 @@ namespace Proyecto_Unidad_3_Patrones
                         Console.WriteLine("Selecciona el equipo del jugador al que deseas asignar un rol:");
                         Console.WriteLine("1. Equipo A");
                         Console.WriteLine("2. Equipo B");
+                        Console.WriteLine("3. Equipo C");
                         equipoSeleccionado = Console.ReadLine();
 
-                        Equipo equipo = equipoSeleccionado == "1" ? equipoA : equipoSeleccionado == "2" ? equipoB : null;
+                        Equipo equipo = equipoSeleccionado == "1" ? equipoA : equipoSeleccionado == "2" ? equipoB : equipoSeleccionado == "3" ? equipoC : null;
 
                         if (equipo == null)
                         {
@@ -210,6 +218,7 @@ namespace Proyecto_Unidad_3_Patrones
                     case "3":
                         equipoA.Mostrar();
                         equipoB.Mostrar();
+                        equipoC.Mostrar();
                         break;
 
                     case "4":
